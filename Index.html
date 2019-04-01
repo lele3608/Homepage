@@ -9,6 +9,8 @@
       <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+      <link rel="stylesheet" type="text/css" href="fullpage.css" />
+      <script type="text/javascript" src="fullpage.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
           $(window).on('scroll', function(){
@@ -50,12 +52,21 @@
             removeClasses();
             $(id).addClass('active');
           }
+
+          $('#fullpage').fullpage({
+		        //options here
+		        autoScrolling:true,
+		        scrollHorizontally: true
+	        });
+
+	        //methods
+	        $.fn.fullpage.setAllowScrolling(false);
         });
       </script>    
       <title>Leandro Kübli</title>
   </head>
   <body>
-    <div>
+    <div id="fullpage">
     <nav>
       <input type="checkbox" id="nav" class="hidden"/>
       <label for="nav" class="nav-btn">
@@ -81,16 +92,16 @@
         </ul>
       </div>
     </nav>
-    <section id="sec1" class="sec1"></section>
-    <section id="sec2" class="content">
+    <section id="sec1" class="sec1 section"></section>
+    <section id="sec2" class="content section">
       <h3>Das bin ich!</h3>
       <p>
           Ich bin Leandro 19 Jahre alt und schliesse diesen Sommer die Lehre als Informatiker ab :)! Wohnhaft bin ich im wunderschönen Thun, beim Tor zum Berner Oberland. Ich wohne mit meinen Eltern und meiner älteren Schwester zusammen.
       </br>
-    </br>
+      </br>
           In meiner Freizeit mache ich sehr gerne Sport, ob Handball oder sonst Fitness, verbringe gerne Zeit am Computer oder unternehme etwas mit Freunden.
       </br>
-    </br>   
+      </br>   
       Mein Ziel ist es, in den nächsten 5 Jahr ein eigenes KMU aufzubauen und mit diesem durchzustarten.
         </br>      
       </br> 
